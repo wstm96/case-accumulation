@@ -74,4 +74,7 @@ subprojects {
 project("t_common") {
     description("工具类模块")
 }
+project("pure_java") {
+    description("纯java情景")
+}
 
