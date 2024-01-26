@@ -1,0 +1,77 @@
+description("所有服务的父工程")
+//构建Gradle脚本自身需要的资源，可以声明的资源包括依赖项、第三方插件、maven仓库地址等。
+buildscript {
+    ext {
+        springBootVersion = '2.3.7.RELEASE'
+    }
+
+    //设置仓库
+    repositories {
+        mavenLocal()
+        maven { name "Alibaba"; url "https://maven.aliyun.com/repository/public" }
+        maven { name "Bstek"; url "https://nexus.bsdn.org/content/groups/public/" }
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+//配置全局, 包括root项目和子项目
+allprojects {
+    group 'git.tmou'
+    version '1.0.0-SNAPSHOT'
+
+    //配置编码格式
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+
+    //设置仓库
+    repositories {
+        mavenLocal()
+        maven { name "Alibaba"; url "https://maven.aliyun.com/repository/public" }
+        maven { name "Bstek"; url "https://nexus.bsdn.org/content/groups/public/" }
+        mavenCentral()
+    }
+
+
+}
+
+
+//所有子项目
+subprojects {
+    apply plugin: 'java'
+//    apply plugin: 'java-library' //api
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+    compileJava.options.encoding "UTF-8"
+    compileTestJava.options.encoding "UTF-8"
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+    //公用的依赖
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        implementation 'org.projectlombok:lombok:1.18.26'
+        implementation 'log4j:log4j:1.2.17'
+
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
+
+//common工程
+project("t_common") {
+    description("工具类模块")
+}
+
