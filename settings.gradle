@@ -1,0 +1,6 @@
+rootProject.name = 'case-accumulation'
+include 't_common'
+include 'pure_java'
+include 'pure_java:listen_design'
+//findProject(':pure_java:listen_design')?.name = 'listen_design'
+

@@ -1,0 +1,7 @@
+//bootJar {
+//    enabled = false
+//}
+dependencies {
+//    api project(':t_common')
+    implementation project(':t_common')
+}

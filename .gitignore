@@ -1,0 +1,36 @@
+# IntelliJ IDEA
+.idea/
+
+# Gradle files
+*.gradle/
+*/gradle
+build/
+
+# Compiled class file
+*.class
+
+# Log files
+*.log
+
+# Mac-specific files
+.DS_Store
+
+# IntelliJ IDEA project-specific files
+*.iml
+.idea_modules/
+out/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/codeStyles
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+
+# Gradle Wrapper
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
+# Local Gradle settings
+gradle-local.properties
