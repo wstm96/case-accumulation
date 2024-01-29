@@ -43,7 +43,7 @@ allprojects {
 //所有子项目
 subprojects {
     apply plugin: 'java'
-//    apply plugin: 'java-library' //api
+    apply plugin: 'java-library' //可以使用api方式
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'org.springframework.boot'
 
@@ -76,5 +76,8 @@ project("t_common") {
 }
 project("pure_java") {
     description("纯java情景")
+//    dependencies {
+//        api project(':t_common')
+//    }
 }
 
