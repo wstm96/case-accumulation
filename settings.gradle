@@ -2,5 +2,6 @@ rootProject.name = 'case-accumulation'
 include 't_common'
 include 'pure_java'
 include 'pure_java:listen_design'
+include 'pure_java:easy_excel'
 //findProject(':pure_java:listen_design')?.name = 'listen_design'
 
