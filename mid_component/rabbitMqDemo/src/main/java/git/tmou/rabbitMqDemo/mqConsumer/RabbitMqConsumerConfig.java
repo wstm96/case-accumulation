@@ -11,13 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-/**
- * @Author Mou Tian
- * @Date 2023/9/3 20:36
- * @ClassName: RabbitMqConsumerConfig
- * @Description: TODO
- * @Version 1.0
- */
+
 @Component
 public class RabbitMqConsumerConfig {
     @RabbitListener(bindings = @QueueBinding(

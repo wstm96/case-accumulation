@@ -1,0 +1,9 @@
+
+dependencies {
+    implementation 'org.apache.shiro:shiro-spring:1.11.0'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'mysql:mysql-connector-java:8.0.29'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.3.1'
+
+}
+

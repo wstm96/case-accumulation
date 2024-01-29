@@ -2,9 +2,9 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-    virtual-host: /tm
-    username: admin
-    password: admin
+    virtual-host: /
+    username: guest
+    password: guest
     #生产者参数
     publisher-confirm-type: simple        # SIMPLE-同步确认（阻塞） CORRELATED-异步确认
     publisher-returns: true                    # 确认消息是否到达队列，在生产者确认机制中需要配置这两个参数

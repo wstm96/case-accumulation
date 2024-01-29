@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/pai_coding?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&autoReconnectForPools=true&allowMultiQueries=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver

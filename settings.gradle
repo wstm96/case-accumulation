@@ -7,5 +7,6 @@ include 'pure_java:easy_excel'
 
 include 'mid_component'
 include 'mid_component:rabbitMqDemo'
+include 'mid_component:shiroDemo'
 //findProject(':pure_java:listen_design')?.name = 'listen_design'
 
