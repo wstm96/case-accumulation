@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    virtual-host: /tm
+    username: admin
+    password: admin
+    #生产者参数
+    publisher-confirm-type: simple        # SIMPLE-同步确认（阻塞） CORRELATED-异步确认
+    publisher-returns: true                    # 确认消息是否到达队列，在生产者确认机制中需要配置这两个参数
+
+    #消费者参数
+    listener:
+      type: simple # simple-listener容器使用一个额外线程处理消息  direct-listener（监听器）容器直接使用consumer线程
+      simple:
+        acknowledge-mode: manual # manual-手动  auto-自动（无异常直接确认，有异常无限重试） none-不重试
+        prefetch: 1 # 能者多劳，能力越强消费越多
+        concurrency: 3 # 避免消息堆积，初始化多个消费者线程

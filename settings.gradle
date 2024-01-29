@@ -3,5 +3,6 @@ include 't_common'
 include 'pure_java'
 include 'pure_java:listen_design'
 include 'pure_java:easy_excel'
+include 'pure_java:rabbitMqDemo'
 //findProject(':pure_java:listen_design')?.name = 'listen_design'
 
